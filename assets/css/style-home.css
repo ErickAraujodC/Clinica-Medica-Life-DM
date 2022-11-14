@@ -1,0 +1,402 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(46, 46, 46);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    width: 100%;
+}
+
+h2{
+    margin: 20px 0;
+    font-size: 28px;
+}
+/*Inicio CSS header*/
+
+
+header{
+    width: 100%;
+    background-color: #00cad1;
+}
+
+.header-container{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    max-width: 1024px;
+    margin: auto;
+}
+
+.box-img-header{
+    width: 50%;
+    padding: 0 30px;
+}
+
+.img-header{
+    width: 120px;
+    display: flex;
+    align-self: flex-start;
+}
+
+.header-ul{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    padding: 0 30px;
+}
+
+.header-ul ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.header-ul ul li{
+    margin: 0 15px;
+    display: flex;
+    overflow: hidden;
+
+
+}
+
+.header-ul ul li a{
+    text-decoration: none;
+    display: flex;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+
+}
+
+.header-ul ul li a:hover{
+    border-bottom: 2px solid #fff;
+}
+
+/*Inicio CSS Titulo com back-img*/
+.imagem-topo{
+    width: 100%;
+    height: 500px;
+    background-image: url("../images/recepcao.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.background-img{
+   margin: auto;
+}
+
+.background-img h1{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.background-img h1 span{
+    background-color: rgba(255, 255, 255, 0.479);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/*Inicio CSS Sobre*/
+
+section.sobre-container{
+    width: 80%;
+    margin: 40px auto;
+}
+
+.img-ul-sobre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin: 30px 0;
+}
+
+.img-ul-sobre div h3{
+    font-size: 20px;
+}
+
+.img-ul-sobre div ul{
+    padding-left: 15px;
+    padding-top: 20px;
+}
+
+/*CSS imagens - sobre*/
+
+.title-especialidade{
+    width: 60%;
+    margin: auto;
+    max-width: 1024px;
+}
+
+.title-especialidade p{
+    margin: 30px 0;
+}
+
+/*Imagens especialidades*/
+
+.img-especialidades{
+    width: 80%;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    
+}
+
+.img-especialidades figure{
+    border: 1px solid #d8d8d8;
+    box-shadow: 2px 1px 5px #686767cf;
+    border-radius: 3px;
+    margin: 30px auto;
+}
+
+
+.img-especialidades figure figcaption{
+    padding: 8px;
+}
+
+.img-especialidades figure img{
+    width: 250px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.horarios{
+    margin: 30px 0;
+}
+
+.horarios:hover{
+    scale: 1.1;
+    
+}
+
+.horarios a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #00cad1;
+    padding: 10px;
+    border-radius: 3px;
+    font-weight: bold;
+
+}
+
+/*Inicio CSS Contato*/
+
+.title-contato{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.title-contato p{
+    line-height: 2em;
+}
+
+iframe{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+    max-width: 1024px;
+}
+
+/*Inicio CSS Footer*/
+
+footer{
+    width: 100%;
+    background-color: #00cad1;
+
+}
+
+.footer-container{
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin: auto;
+    max-width: 1024px;
+}
+
+.img-footer img{
+    width: 130px;
+}
+
+footer div p{
+    font-weight: bold;
+}
+
+/*Menu toogle*/
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+display: block;
+background-color: #fff;
+position: absolute;
+height: 4px;
+width: 30px;
+transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+border-radius: 2px;
+}
+
+.menu-button::before {
+content: "";
+margin-top: -8px;
+}
+
+.menu-button::after {
+content: "";
+margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+margin-top: 0px;
+transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+margin-top: 0px;
+transform: rotate(-405deg);
+}
+
+/*Inicio media queries*/
+
+@media (max-width: 1024px){
+    .imagem-topo{
+        height: 400px;
+    }
+    .background-img h1{
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px){
+    .imagem-topo{
+        height: 300px;
+    }
+
+    .background-img h1{
+        width: 80%;
+        margin: auto;
+        height: 300px;
+    }
+    
+
+    .img-especialidades{
+        flex-wrap: wrap;
+    }
+    .img-sobre{
+        display: none;
+    }
+}
+
+@media (max-width: 500px){
+    .imagem-topo{
+        height: 200px;
+    }
+
+    .background-img h1{
+        width: 80%;
+        margin: auto;
+        font-size: 28px;
+        height: 200px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+    
+    .menu-button-container {
+        display: flex;
+    }
+    
+    .menu {
+        position: absolute;
+        top: 0;
+        margin-top: 50px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-ul ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menu-toggle ~ .menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        
+    }
+
+    #menu-toggle:checked ~ .menu li {
+        border: 1px solid #333;
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .menu > li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .header-ul ul li a{
+        color: #00cad1;  
+    }
+
+    .menu > li:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
+}
+
+
+
+
+
+
+
+
+

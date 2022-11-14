@@ -1,0 +1,135 @@
+/*CSS links topo*/
+.links-especialidades{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: 70%;
+    margin: auto;
+}
+
+.links-especialidades a{
+    text-decoration: none;
+    color: rgb(46, 46, 46);
+    font-size: 20px;
+    margin: 20px 10px;
+    border-bottom: 3px solid #00cad1;
+    font-weight: bold;
+}
+.links-especialidades a:hover{
+    color: #00cad1;
+    border-bottom: 3px solid rgb(46, 46, 46);
+}
+
+.title-especialidades{
+    font-size: 22px;
+    margin: 30px auto;
+}
+
+/*Css tabelas*/
+
+.title-container-especialidade{
+    width: 70%;
+    margin: auto;
+}
+.title-container-especialidade h3{
+    margin: 20px auto;
+}
+
+.container-especialidade{
+    display: flex;
+    height: 240px;
+    padding: 0 20px;
+    margin: 50px auto;
+    justify-content: center;
+}
+
+.container-especialidade img{
+    width: 290px;
+    height: 240px;
+    object-fit: cover;
+}
+
+.tabela-especialistas {
+    border-spacing: 0;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+}
+
+.tabela-especialistas thead tr {
+    background-color: #00cad1;
+    color: #fff;
+}
+
+.tabela-especialistas tr {
+    background-color: #f1f1f1;
+    color: #585757;
+    font-weight: 500;
+}
+  
+.tabela-especialistas tbody tr:nth-of-type(2n+1) {
+    background-color: #cdcdcd;
+    border: 1px solid #f1f1f1;
+}
+  
+.tabela-especialistas th, .tabela-especialistas td  {
+    padding: 10px;
+}
+
+@media (max-width: 860px){
+    .container-especialidade img{
+        display: none;
+    }
+    .tabela-especialistas{
+        width: 90%;
+    }
+    .links-especialidades{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px){
+
+    .tabela-especialistas{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .links-especialidades{
+        display: flex;
+        flex-flow: row wrap;
+        
+    }
+    .links-especialidades a{
+        background-color: #00cad1;
+        box-sizing: border-box;
+        padding: 5px;
+        display: flex;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+    .links-especialidades a:hover{
+        color: rgb(46, 46, 46);
+    }
+}
+
+@media (max-width: 410px){
+    .links-especialidades{
+        display: flex;
+        flex-flow: row wrap;
+        
+    }
+    .links-especialidades a{
+        background-color: #00cad1;
+        box-sizing: border-box;
+        padding: 5px;
+        display: flex;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+    .links-especialidades a:hover{
+        color: rgb(46, 46, 46);
+    }
+}
